@@ -1,0 +1,20 @@
+{
+  "name": "bool-array",
+  "version": "1.0.0",
+  "description": "A boolean version of the TypedArray",
+  "main": "index.js",
+  "author": "Maurice Prosper",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/should": "^13.0.0",
+    "mocha": "^6.2.2",
+    "should": "^13.2.3",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "build": "tsc && tsc -m es2015 --outDir dist/esm",
+    "test": "mocha -r ts-node/register -r should test.ts"
+  }
+}
