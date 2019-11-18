@@ -1,7 +1,7 @@
 {
-  "name": "bool-array",
+  "name": "bit-array",
   "version": "1.0.0",
-  "description": "A boolean version of the TypedArray",
+  "description": "Add support for directly setting bits an ArrayBuffer.",
   "main": "dist/npm/index.js",
   "module": "dist/esm/index.js",
   "sideEffects": false,

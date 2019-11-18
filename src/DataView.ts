@@ -3,7 +3,7 @@ import { BYTE_OFFSET, BYTE_OFFSET_MASK, bit } from './constants'
 declare global {
   export interface DataView {
     setBit(offest: number, bit: bit): void
-    getBit(offest: number): boolean
+    getBit(offest: number): bit
   }
 }
 
