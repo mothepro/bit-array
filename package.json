@@ -2,7 +2,9 @@
   "name": "bool-array",
   "version": "1.0.0",
   "description": "A boolean version of the TypedArray",
-  "main": "index.js",
+  "main": "dist/npm/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
   "author": "Maurice Prosper",
   "license": "MIT",
   "devDependencies": {
