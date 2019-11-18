@@ -7,7 +7,7 @@ export const BITS_PER_BYTE = 8
 export const BYTES_PER_ELEMENT = 1 / BITS_PER_BYTE
 
 /** The number of bits that represent the boolean offset within a byte. */
-export const X = 3
+export const BYTE_OFFSET = 3
 
-/** A mask representing `X` bits set. */
-export const Y = 0b111
+/** A mask representing `BYTE_OFFSET` bits set. */
+export const BYTE_OFFSET_MASK = 0b111
