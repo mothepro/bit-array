@@ -1,8 +1,5 @@
 import 'should'
-import './src/DataView'
-import toUint8 from './src/toUint8'
-import fromUint8 from './src/fromUint8'
-import toArrayBuffer from './src/toArrayBuffer'
+import { fromBuffer, fromUint8, toBuffer, toUint8 } from './index'
 
 it('should convert bit array to number', () => {
   toUint8().should.eql(0)
@@ -26,4 +23,21 @@ it('should set bits directly with DataView', () => {
   view.getBit(0).should.eql(false)
   view.getBit(2).should.eql(true)
   view.getUint8(0).should.eql(0b0000_0100)
+})
+
+it('should convert bit array to an ArrayBuffer with minimal size', () => {
+  toBuffer().byteLength.should.eql(0)
+  toBuffer(true, true, false).byteLength.should.eql(1)
+  toBuffer(true, true, true, true, true, true, true, true, true).byteLength.should.eql(2)
+})
+
+it('should convert number to bit array', () => {
+  const uint8 = 0b0011_1010,
+    emptyBuffer = new Uint8Array([]).buffer,
+    zeroBuffer = new Uint8Array([0]).buffer,
+    buffer = new Uint8Array([uint8]).buffer
+
+  fromBuffer(emptyBuffer).should.be.empty()
+  fromBuffer(zeroBuffer).should.eql([false, false, false, false, false, false, false, false])
+  fromBuffer(buffer).should.eql([false, true, false, true, true, true, false, false])
 })

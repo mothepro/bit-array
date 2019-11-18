@@ -1,0 +1,5 @@
+import './src/DataView'
+export {default as fromUint8} from './src/fromUint8'
+export {default as toUint8} from './src/toUint8'
+export {default as toBuffer} from './src/toBuffer'
+export {default as fromBuffer} from './src/fromBuffer'
