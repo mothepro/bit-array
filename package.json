@@ -9,7 +9,7 @@
   "license": "MIT",
   "files": [
     "dist"
-  ],
+  ],k
   "publishConfig": {
     "access": "public"
   },
