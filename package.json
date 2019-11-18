@@ -1,5 +1,5 @@
 {
-  "name": "bit-array",
+  "name": "@mothepro/bit-array",
   "version": "1.0.0",
   "description": "Add support for directly setting bits an ArrayBuffer.",
   "main": "dist/npm/index.js",
