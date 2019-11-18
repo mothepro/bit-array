@@ -33,4 +33,3 @@
     "test": "mocha -r ts-node/register -r should test.ts"
   }
 }
-I HATE GIT
